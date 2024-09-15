@@ -94,37 +94,37 @@ const Add = () => {
         <h1>Add your spending below</h1>
         
         <div className="form-container">
-          <h2>Add Food</h2>
+          <h2>Add Food Expense</h2>
           <form onSubmit={handleAddFood}>
-            <input type="number" name="groceries" placeholder="Groceries" min="0" step="0.01" value={food.groceries} onChange={handleFoodChange} />
-            <input type="number" name="diningOut" placeholder="Dining Out" min="0" step="0.01" value={food.diningOut} onChange={handleFoodChange} />
-            <input type="number" name="beverage" placeholder="Beverage" min="0"  step="0.01" value={food.beverage} onChange={handleFoodChange} />
-            <input type="number" name="takeOut" placeholder="Take Out" min="0" step="0.01"  value={food.takeOut} onChange={handleFoodChange} />
-            <button type="submit">Add Food</button>
+            <input type="number" name="groceries" placeholder="Groceries cost in ₹" min="0" step="0.01" value={food.groceries} onChange={handleFoodChange} />
+            <input type="number" name="diningOut" placeholder="Dining Out cost in ₹" min="0" step="0.01" value={food.diningOut} onChange={handleFoodChange} />
+            <input type="number" name="beverage" placeholder="Beverage cost in ₹" min="0"  step="0.01" value={food.beverage} onChange={handleFoodChange} />
+            <input type="number" name="takeOut" placeholder="Take Out cost in ₹" min="0" step="0.01"  value={food.takeOut} onChange={handleFoodChange} />
+            <button type="submit">Add Food Expense</button>
           </form>
         </div>
 
         <div className="form-container">
-          <h2>Add Entertainment</h2>
+          <h2>Add Entertainment Expense</h2>
           <form onSubmit={handleAddEntertainment}>
-            <input type="number" name="streamingSubscriptions" placeholder="Streaming Subscriptions" min="0" step="0.01"  value={entertainment.streamingSubscriptions} onChange={handleEntertainmentChange} />
-            <input type="number" name="musicSubscriptions" placeholder="Music Subscriptions" min="0" step="0.01"  value={entertainment.musicSubscriptions} onChange={handleEntertainmentChange} />
-            <input type="number" name="cinemaAndEvents" placeholder="Cinema and Events" min="0" step="0.01"  value={entertainment.cinemaAndEvents} onChange={handleEntertainmentChange} />
-            <input type="number" name="shoppingBills" placeholder="Shopping Bills" min="0"  step="0.01" value={entertainment.shoppingBills} onChange={handleEntertainmentChange} />
-            <button type="submit">Add Entertainment</button>
+            <input type="number" name="streamingSubscriptions" placeholder="Streaming Subscriptions cost in ₹" min="0" step="0.01"  value={entertainment.streamingSubscriptions} onChange={handleEntertainmentChange} />
+            <input type="number" name="musicSubscriptions" placeholder="Music Subscriptions cost in ₹" min="0" step="0.01"  value={entertainment.musicSubscriptions} onChange={handleEntertainmentChange} />
+            <input type="number" name="cinemaAndEvents" placeholder="Cinema and Events cost in ₹" min="0" step="0.01"  value={entertainment.cinemaAndEvents} onChange={handleEntertainmentChange} />
+            <input type="number" name="shoppingBills" placeholder="Shopping Bills cost in ₹" min="0"  step="0.01" value={entertainment.shoppingBills} onChange={handleEntertainmentChange} />
+            <button type="submit">Add Entertainment Expense</button>
           </form>
         </div>
 
         <div className="form-container">
-          <h2>Add Utility</h2>
+          <h2>Add Utility Expense</h2>
           <form onSubmit={handleAddUtility}>
-            <input type="number" name="electricity" placeholder="Electricity" min="0" step="0.01"  value={utility.electricity} onChange={handleUtilityChange} />
-            <input type="number" name="water" placeholder="Water" min="0"  step="0.01" value={utility.water} onChange={handleUtilityChange} />
-            <input type="number" name="rent" placeholder="Rent" min="0"  step="0.01" value={utility.rent} onChange={handleUtilityChange} />
-            <input type="number" name="gas" placeholder="Gas" min="0"  step="0.01" value={utility.gas} onChange={handleUtilityChange} />
-            <input type="number" name="mobile" placeholder="Mobile" min="0" step="0.01"  value={utility.mobile} onChange={handleUtilityChange} />
-            <input type="number" name="maintenance" placeholder="Maintenance" min="0" step="0.01"  value={utility.maintenance} onChange={handleUtilityChange} />
-            <button type="submit">Add Utility</button>
+            <input type="number" name="electricity" placeholder="Electricity cost in ₹" min="0" step="0.01"  value={utility.electricity} onChange={handleUtilityChange} />
+            <input type="number" name="water" placeholder="Water cost in ₹" min="0"  step="0.01" value={utility.water} onChange={handleUtilityChange} />
+            <input type="number" name="rent" placeholder="Rent cost in ₹" min="0"  step="0.01" value={utility.rent} onChange={handleUtilityChange} />
+            <input type="number" name="gas" placeholder="Gas cost in ₹" min="0"  step="0.01" value={utility.gas} onChange={handleUtilityChange} />
+            <input type="number" name="mobile" placeholder="Mobile cost in ₹" min="0" step="0.01"  value={utility.mobile} onChange={handleUtilityChange} />
+            <input type="number" name="maintenance" placeholder="Maintenance cost in ₹" min="0" step="0.01"  value={utility.maintenance} onChange={handleUtilityChange} />
+            <button type="submit">Add Utility Expense</button>
           </form>
         </div>
 

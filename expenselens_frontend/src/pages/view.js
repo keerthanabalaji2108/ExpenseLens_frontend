@@ -15,7 +15,14 @@ const View = () => {
   const totalIncome = obj?.salary || 0; // Get the total income from the object
 
   const [spendingVsSaving, setSpendingVsSaving] = useState([]);
-  const [entertainment, setEntertainment] = useState({});
+  const [entertainment, setEntertainment] = useState(
+    {
+      // "streamingSubscriptions": 0.0,
+      // "musicSubscriptions": 0.0,
+      // "cinemaAndEvents": 0.0,
+      // "shoppingBills": 0.0
+  }
+  );
   const [food, setFood] = useState({});
   const [utility, setUtility] = useState({});
   const [percentage, setPercentage] = useState([]);
@@ -54,12 +61,24 @@ const View = () => {
 
   // Utility function to calculate total and avoid floating-point issues
   const calculateTotal = (expenseData) => {
-    return Object.values(expenseData).reduce((total, value) => {
-      const numericValue = parseFloat(value);
-      // Ensuring value is valid number and rounding to 2 decimal places
-      return total + (numericValue===0 ? 0 : ((numericValue * 100) / 100));
-    }, 0).toFixed(2);
+    // Filter out non-numeric values (e.g., 'id') and calculate the total
+    return Object.entries(expenseData).reduce((sum, [key, value]) => {
+      // Check if the value is numeric and not an ID
+      if (!isNaN(parseFloat(value)) && isFinite(value) && key !== 'id') {
+        return sum + parseFloat(value);
+      }
+      return sum;
+    }, 0);
   };
+
+  // Debugging total calculations
+  const totalEntertainment = calculateTotal(entertainment);
+  const totalFood = calculateTotal(food);
+  const totalUtility = calculateTotal(utility);
+
+  console.log('Total Entertainment:', totalEntertainment); // Debugging line
+  console.log('Total Food:', totalFood); // Debugging line
+  console.log('Total Utility:', totalUtility); // Debugging line
 
   // Data for pie charts
   const spendingVsSavingData = {
@@ -114,11 +133,11 @@ const View = () => {
     );
   };
 
-  const totalSpending = (
-    parseFloat(calculateTotal(entertainment)) +
-    parseFloat(calculateTotal(food)) +
-    parseFloat(calculateTotal(utility))
-  ).toFixed(2);
+  // const totalSpending = (
+  //   parseFloat(calculateTotal(entertainment)) +
+  //   parseFloat(calculateTotal(food)) +
+  //   parseFloat(calculateTotal(utility))
+  // ).toFixed(2);
 
   return (
     <div className="view-page">
@@ -133,7 +152,7 @@ const View = () => {
           </div>
           <div className="total-spending-box" style={{ padding: '20px', backgroundColor: '#9ce7b9', borderRadius: '5px', flex: 1 }}>
             <h3>Total Spending</h3>
-            <p>{totalSpending.toLocaleString('en-IN', { maximumFractionDigits: 2 })-3}</p>
+            <p>{(totalEntertainment + totalFood + totalUtility).toLocaleString('en-IN', { maximumFractionDigits: 2 })}</p>
           </div>
         </div>
 
@@ -154,7 +173,7 @@ const View = () => {
             <h2>Entertainment Expense</h2>
             <div className="expense-summary">
               <div className="total-box">
-                <p>Total Expense: {'\u20B9'}{calculateTotal(entertainment).toLocaleString('en-IN', { maximumFractionDigits: 2 })-1}</p>
+              <li><strong>Total:</strong> {'\u20B9'}{totalEntertainment.toFixed(2)}</li>
               </div>
             </div>
             {renderExpenseDetails(entertainment)}
@@ -163,7 +182,7 @@ const View = () => {
             <h2>Food Expense</h2>
             <div className="expense-summary">
               <div className="total-box">
-                <p>Total Expense: {'\u20B9'}{calculateTotal(food).toLocaleString('en-IN', { maximumFractionDigits: 2 })-1}</p>
+              <li><strong>Total:</strong> {'\u20B9'}{totalFood.toFixed(2)}</li>
               </div>
             </div>
             {renderExpenseDetails(food)}
@@ -172,7 +191,7 @@ const View = () => {
             <h2>Utility Expense</h2>
             <div className="expense-summary">
               <div className="total-box">
-                <p>Total Expense: {'\u20B9'}{calculateTotal(utility).toLocaleString('en-IN', { maximumFractionDigits: 2 })-1}</p>
+              <li><strong>Total:</strong> {'\u20B9'}{totalUtility.toFixed(2)}</li>
               </div>
             </div>
             {renderExpenseDetails(utility)}
