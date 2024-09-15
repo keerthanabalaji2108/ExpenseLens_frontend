@@ -64,7 +64,8 @@ const Welcome = () => {
   return (
     <div className="welcome-page">
     <div className="intro-section">
-      <h1>Welcome to Expense Lens</h1>
+      <h1>Welcome to ExpenseLens</h1>
+      <h3>An innovative approach to your personal finance management</h3>
       <p>
         Take control of your finances with Expense Lens! Our platform helps you 
         track your income and expenses, categorize your spending, and visualize 
