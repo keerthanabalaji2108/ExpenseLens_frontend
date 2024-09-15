@@ -131,9 +131,9 @@ const View = () => {
             <h3>Total Income</h3>
             <p>{totalIncome.toLocaleString('en-IN', { maximumFractionDigits: 2 })}</p>
           </div>
-          <div className="total-spending-box" style={{ padding: '20px', backgroundColor: '#ffebcc', borderRadius: '5px', flex: 1 }}>
+          <div className="total-spending-box" style={{ padding: '20px', backgroundColor: '#9ce7b9', borderRadius: '5px', flex: 1 }}>
             <h3>Total Spending</h3>
-            <p>{totalSpending.toLocaleString('en-IN', { maximumFractionDigits: 2 })}</p>
+            <p>{totalSpending.toLocaleString('en-IN', { maximumFractionDigits: 2 })-3}</p>
           </div>
         </div>
 
@@ -151,7 +151,7 @@ const View = () => {
         {/* Static sections for each expense detail */}
         <div className="details-container">
           <div className="expense-detail">
-            <h2>Entertainment Expense Details</h2>
+            <h2>Entertainment Expense</h2>
             <div className="expense-summary">
               <div className="total-box">
                 <p>Total Expense: {'\u20B9'}{calculateTotal(entertainment).toLocaleString('en-IN', { maximumFractionDigits: 2 })-1}</p>
@@ -160,7 +160,7 @@ const View = () => {
             {renderExpenseDetails(entertainment)}
           </div>
           <div className="expense-detail">
-            <h2>Food Expense Details</h2>
+            <h2>Food Expense</h2>
             <div className="expense-summary">
               <div className="total-box">
                 <p>Total Expense: {'\u20B9'}{calculateTotal(food).toLocaleString('en-IN', { maximumFractionDigits: 2 })-1}</p>
@@ -169,7 +169,7 @@ const View = () => {
             {renderExpenseDetails(food)}
           </div>
           <div className="expense-detail">
-            <h2>Utility Expense Details</h2>
+            <h2>Utility Expense</h2>
             <div className="expense-summary">
               <div className="total-box">
                 <p>Total Expense: {'\u20B9'}{calculateTotal(utility).toLocaleString('en-IN', { maximumFractionDigits: 2 })-1}</p>

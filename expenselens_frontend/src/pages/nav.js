@@ -52,14 +52,27 @@ const Nav = () => {
 
   return (
     <>
-    <div className="sidebar">
-    <h3>Welcome {username}!</h3>
-    <h4>Choose a service:</h4>
-      
-      <button className="sidebar-button" onClick={handleViewClick}>View Current Expense</button>
-      <button className="sidebar-button" onClick={handleAddClick}>Add New Expense</button>
-      <button className="sidebar-buttondown" onClick={handleLogoutClick}>Logout</button>
-    </div>
+      <div className="sidebar">
+        <h2>Welcome, {username}! Manage your expenses with the following options - </h2>
+        <p className="sidebar-description">View a summary of all your current expenses:</p>
+        <button className="sidebar-button" onClick={handleViewClick}>
+          Expense chart
+        </button>
+        <br/>
+        <br/>
+        
+        <p className="sidebar-description">Add a new expense to the system:</p>
+        <button className="sidebar-button" onClick={handleAddClick}>
+          Add New Expense
+        </button>
+
+        <br/>
+        <br/>
+        <br/>
+        <button className="sidebar-buttondown" onClick={handleLogoutClick}>
+          Logout
+        </button>
+      </div>
     </>
   );
 };

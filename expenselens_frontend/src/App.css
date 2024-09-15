@@ -1,5 +1,9 @@
 /******************** welcome **************************/
 .welcome-page {
+  background-image: url('../public/calci.jpg'); /* Path to your image in the public folder */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,17 +16,24 @@
 }
 
 .intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
   flex: 1;
-  padding-right: 40px;
+  padding: 50px; /* Add some padding around the text */
   max-width: 50%;
+  background-color: rgba(250, 243, 232, 0.8); /* Increase transparency */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center-align text inside */
+  margin: 0 auto; /* Center the section within the page */
 }
 
 .intro-section h1 {
   font-size: 2.5em;
-  color: #4caf50;
+  color: rgb(202, 108, 96);
   margin-bottom: 15px;
-  text-align: center; /* Center-justify text */
-
 }
 
 .intro-section p {
@@ -32,7 +43,7 @@
 }
 
 .login-section {
-  background-color: #fff;
+  background-color: rgb(251, 233, 208);
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -64,7 +75,7 @@
 .login-button {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #ae4334;
   border: none;
   color: white;
   font-size: 1.2em;
@@ -88,11 +99,12 @@ p {
 }
 
 p a {
-  color: #4caf50;
+  color: #ae4334;
   text-decoration: none;
 }
 
 p a:hover {
+  color: #4caf50;
   text-decoration: underline;
 }
 
@@ -114,13 +126,26 @@ p a:hover {
 
 
 /******************** sign-up **************************/
+.signup-page {
+  background-image: url('../public/calci.jpg'); /* Path to your image in the public folder */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  height: 100vh;
+
+}
+
 .signup-container {
   width: 300px;
+  background-color: rgb(251, 233, 208);
   margin: 50px auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -141,6 +166,8 @@ p a:hover {
 }
 
 .signup-form input {
+  background-color: rgb(236, 209, 171);
+  padding: 40px;
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
@@ -157,12 +184,13 @@ p a:hover {
 .signup-button {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #ae4334;
   border: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2em;
   cursor: pointer;
   border-radius: 4px;
+  margin-top: 10px;
 }
 
 .signup-button:hover {
@@ -196,15 +224,16 @@ p a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 250px;
   height: 100%;
-  background-color: #84f0e4;
-  border-right: 1px solid #ddd;
+  background-color: #244855;
+  border-right: 1px solid #0fa4af;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color : #ddd;
 }
 
 .sidebar h2 {
@@ -212,8 +241,9 @@ p a:hover {
 }
 
 .sidebar-button {
-  background-color: #f1b0db;
-  color: rgb(0, 0, 0);
+  background-color: #ae4334;
+  color: #ddd;
+  font-weight: bold;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -226,22 +256,23 @@ p a:hover {
   align-items: center; 
   justify-content: center;
 }
-.sidebar-buttondown
-{
+.sidebar-buttondown {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   padding: 10px 20px;
   border: none;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  margin-bottom: 10px; 
-  width: 100%;
-  text-align: center; 
+  margin-bottom: 10px;
+  width: 70%;
+  text-align: center;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
-  
+  margin-left: auto;
+  margin-right: auto;
 }
 .sidebar-buttondown:hover {
   background-color: #45a049;
@@ -254,16 +285,19 @@ p a:hover {
 
 .add-page {
   display: flex;
+  background-color: #fbe9d0;
 }
 
 .content {
-  margin-left: 250px;
+  margin-left: 300px;
   padding: 20px;
   flex: 1;
+  color: #244855;
 }
 
 .form-container {
-  margin-bottom: 30px;
+  color: #132127;
+  margin-bottom: 50px;
 }
 
 .form-container h2 {
@@ -283,7 +317,7 @@ p a:hover {
 
 .form-container button {
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #ae4334;
   color: white;
   border: none;
   border-radius: 5px;
@@ -295,12 +329,14 @@ p a:hover {
 
 .view-page {
   padding: 20px;
+  background-color: #fbe9d0;
 }
 
 .chart-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  
 }
 
 .chart {
@@ -331,12 +367,18 @@ p a:hover {
   border-radius: 4px;
 }
 
+
 .expense-detail {
   flex: 1;
-  background-color: #f1f1f1;
+  background-color: #bfd1d1;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: 1px solid #ddd;
+}
+
+.expense-detail h2{
+  text-align:center; /* Center-align text inside */
+  margin: 0 auto; /* Center the section within the page */
 }
 
 .income-box {
@@ -356,7 +398,7 @@ p a:hover {
 }
 
 .total-spending-box {
-  background-color: #e0f7e9; /* Light green background to match the income box */
+  background-color: hwb(143 61% 9%); /* Light green background to match the income box */
   border: 1px solid #000000; /* Green border to match the income box */
   border-radius: 8px;
   padding: 15px;
@@ -382,7 +424,7 @@ p a:hover {
 }
 
 .total-box {
-  background-color: #4caf50; /* Green background */
+  background-color: #003135; /* Green background */
   color: white; /* White text */
   padding: 10px;
   border-radius: 5px;
