@@ -30,23 +30,23 @@ const View = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const spendingResponse = await fetch(`http://34.202.164.173:9090/expenses/getSpendingVsSaving/${userId}`);
+        const spendingResponse = await fetch(`http://54.158.145.141:9090/expenses/getSpendingVsSaving/${userId}`);
         const spendingData = await spendingResponse.json();
         setSpendingVsSaving(spendingData);
 
-        const entertainmentResponse = await fetch(`http://34.202.164.173:9090/expenses/getEntertainment/${userId}`);
+        const entertainmentResponse = await fetch(`http://54.158.145.141:9090/expenses/getEntertainment/${userId}`);
         const entertainmentData = await entertainmentResponse.json();
         setEntertainment(entertainmentData);
 
-        const foodResponse = await fetch(`http://34.202.164.173:9090/expenses/getFood/${userId}`);
+        const foodResponse = await fetch(`http://54.158.145.141:9090/expenses/getFood/${userId}`);
         const foodData = await foodResponse.json();
         setFood(foodData);
 
-        const utilityResponse = await fetch(`http://34.202.164.173:9090/expenses/getUtility/${userId}`);
+        const utilityResponse = await fetch(`http://54.158.145.141:9090/expenses/getUtility/${userId}`);
         const utilityData = await utilityResponse.json();
         setUtility(utilityData);
 
-        const percentageResponse = await fetch(`http://34.202.164.173:9090/expenses/getAsPercentage/${userId}`);
+        const percentageResponse = await fetch(`http://54.158.145.141:9090/expenses/getAsPercentage/${userId}`);
         const percentageData = await percentageResponse.json();
         setPercentage(percentageData);
         
