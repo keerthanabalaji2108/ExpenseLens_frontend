@@ -24,7 +24,7 @@ const Welcome = () => {
 
     try {
       // Post request to the API
-      const response = await fetch(`http://54.158.145.141:9090/expenses/getUser`, {
+      const response = await fetch(`http://localhost:9090/expenses/getUser`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
