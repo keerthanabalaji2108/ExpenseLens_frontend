@@ -118,7 +118,7 @@ const View = () => {
     },
   };
 
-  // Utility function to display expense details as a list with rupee symbol
+  // Utility function to display expense details as a list with ruppee symbol
   const renderExpenseDetails = (expenseData) => {
     return (
       <ul>
