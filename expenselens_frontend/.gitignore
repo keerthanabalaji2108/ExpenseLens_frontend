@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local .terraform directories
+.terraform/
+
+# Ignore the .tfstate files, which contain the real infrastructure state
+terraform.tfstate
+terraform.tfstate.backup
