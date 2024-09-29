@@ -29,7 +29,7 @@ const Add = () => {
   const handleAddFood = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:9090/expenses/updateFood?id=${userId}`, {
+      const response = await fetch(`http://ec2-18-203-250-226.eu-west-1.compute.amazonaws.com:8080/expenses/updateFood?id=${userId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(food),
@@ -49,7 +49,7 @@ const Add = () => {
   const handleAddEntertainment = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:9090/expenses/updateEntertainment?id=${userId}`, {
+      const response = await fetch(`http://ec2-18-203-250-226.eu-west-1.compute.amazonaws.com:8080/expenses/updateEntertainment?id=${userId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(entertainment),
@@ -68,9 +68,8 @@ const Add = () => {
 
   const handleAddUtility = async (e) => {
     e.preventDefault();
-    
     try {
-        const response = await fetch(`http://localhost:9090/expenses/updateUtility?id=${userId}`, {
+        const response = await fetch(`http://ec2-18-203-250-226.eu-west-1.compute.amazonaws.com:8080/expenses/updateUtility?id=${userId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(utility),
