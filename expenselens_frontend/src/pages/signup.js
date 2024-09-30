@@ -32,7 +32,7 @@ const SignUp = () => {
 
     try {
       // Make the POST request to the API endpoint
-      const response = await fetch(`http://54.216.15.179:8080/expenses/newUser`, {
+      const response = await fetch(`http://3.252.154.31:8080/expenses/newUser`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

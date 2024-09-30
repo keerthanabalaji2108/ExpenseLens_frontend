@@ -24,7 +24,7 @@ const Welcome = () => {
 
     try {
       // Post request to the API
-      const response = await fetch(`http://54.216.15.179:8080/expenses/getUser`, {
+      const response = await fetch(`http://3.252.154.31:8080/expenses/getUser`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

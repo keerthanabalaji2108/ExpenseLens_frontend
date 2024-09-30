@@ -29,7 +29,7 @@ const Add = () => {
   const handleAddFood = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://54.216.15.179:8080/expenses/updateFood?id=${userId}`, {
+      const response = await fetch(`http://3.252.154.31:8080/expenses/updateFood?id=${userId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(food),
@@ -49,7 +49,7 @@ const Add = () => {
   const handleAddEntertainment = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://54.216.15.179:8080/expenses/updateEntertainment?id=${userId}`, {
+      const response = await fetch(`http://3.252.154.31:8080/expenses/updateEntertainment?id=${userId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(entertainment),
@@ -69,7 +69,7 @@ const Add = () => {
   const handleAddUtility = async (e) => {
     e.preventDefault();
     try {
-        const response = await fetch(`http://54.216.15.179:8080/expenses/updateUtility?id=${userId}`, {
+        const response = await fetch(`http://3.252.154.31:8080/expenses/updateUtility?id=${userId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(utility),
